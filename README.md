@@ -16,6 +16,7 @@ The project aims to:
   <li>Create Route Table</li>
   <li>Create a Security Group</li>
   <li>Create Network ACL</li>
+  <li>Create a private subnet</li>
 </ul>
   <img src="AWS VPC/Architecture.jpg" alt="Architecture">
 
