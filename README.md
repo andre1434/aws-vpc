@@ -1,6 +1,6 @@
 <h1>Building a Virtual Private Cloud (VPC)</h1>
 
-This repository contains a walkthrough in building a Virtual Private Cloud (VPC) in AWS and add a public subnet. 
+This repository contains a walkthrough in building a Virtual Private Cloud (VPC) in AWS and add a public and private subnet. 
 
 Resources used:
 - VPC
@@ -44,18 +44,26 @@ Internet Gatewat creation process:
 
   <img src="AWS VPC/Internet Gateway.jpg" alt="Internet Gateway">
 
-<h2>Create a Route Table</h2>
+<h2>Stage 4: Create a Route Table</h2>
 To route the packets to the internet gateway, a route needs to be setup in the route table. Set explicit subnet associations.
   <img src="AWS VPC/Route Table.jpg" alt="Route Table">
 With this, traffic is now routed to and from the internet.
 
-<h2>Create a Security Group</h2>
+<h2>Stage 5: Create a Security Group</h2>
 In this project, I created a security group. This is a security measure to either allow or deny the type/s of traffic to an associated resource (ie EC2).
   <img src="AWS VPC/Security Groups.jpg" alt="Security Group">
 
-<h2>Create a Network ACL</h2>
+<h2>Stage 6: Create a Network ACL</h2>
 Create a network ACL and associate to a subnet. This allows or denies specific type/s of traffic in/out of the subnet.
   <img src="AWS VPC/inbound ACL.jpg" alt="ACL">
+
+<h2>Stage 7: Create a Private Subnet</h2>
+Creating a Private Subnet is almost identical to a public subnet with a few differences:<br>
+Follow stages 2, 4, 5, and 6.<br>
+Make sure that Route table does not route to the internet.<br>
+ACL Should restrict access from the internet.<br>
+Set up all necessary associations.
   
 <h3>## Credits ##</h3>
 Project was originally authored by <a href="https://community.nextwork.org/home">Nextwork</a>.
+<p align="center"><b>==END OF DOCUMENTATION==</b>
